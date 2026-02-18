@@ -1,7 +1,7 @@
 # BMS_V_5 - Apartment Management System
 
 ## Overview
-A full-stack Apartment Management System for managing tenants, leases, payments, and authentication.
+A full-stack Apartment Management System for managing residents, owners, notification, payments and role based authentications
 
 ## Architecture
 - Frontend: Bootstrap + JavaScript
@@ -11,13 +11,15 @@ A full-stack Apartment Management System for managing tenants, leases, payments,
 ## Project Structure
 BMS_V_5/
  ├── backend
- └── frontend
+ ├── frontend
 
 ## Features
 - User Authentication
-- Tenant Management
+- Resident Management
+- Owner Management
 - Lease Management
 - Payment Tracking
+- Notification System
 - Role-based access control
 
 ## Future Improvements
