@@ -1,0 +1,74 @@
+/* =========================================
+   USER DROPDOWN – FINAL POLISH
+   ========================================= */
+
+/* Dropdown width */
+.navbar .user-menu .dropdown-menu {
+  width: 200px !important;
+  min-width: 200px !important;
+}
+
+/* Reduce header padding & spacing */
+.navbar .user-menu .user-header {
+  padding: 0.75rem 0.5rem 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Softer header background (replace deep blue) */
+.navbar .user-menu .user-header.text-bg-primary {
+  background-color: #2c3141 !important;
+  color: #fcfcfc !important;
+}
+
+/* Shrink avatar */
+.navbar .user-menu .user-header img {
+  width: 56px !important;
+  height: 56px !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* Tighten name & role text */
+.navbar .user-menu .user-header p {
+  margin: 0 !important;
+  line-height: 1.2;
+}
+
+/* Reduce space before menu items */
+.navbar .user-menu .dropdown-item:first-child {
+  margin-top: 0.25rem;
+}
+
+/* =========================================
+   USER DROPDOWN – REMOVE EXTRA SPACE
+   ========================================= */
+
+/* Kill forced min-height on header */
+.navbar .user-menu .user-header {
+  min-height: unset !important;
+}
+
+/* Remove extra padding inside dropdown */
+.navbar .user-menu .dropdown-menu {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Tighten spacing between header and first item */
+.navbar .user-menu .dropdown-item:first-child {
+  padding-top: 0.4rem !important;
+}
+
+/* Add space after last item (Sign out) */
+.navbar .user-menu .dropdown-menu li:last-child {
+  padding-bottom: 0.4rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}

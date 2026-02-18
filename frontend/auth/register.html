@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Apartment Easy | Register</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Fonts -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
+    crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    crossorigin="anonymous"
+  />
+
+  <!-- AdminLTE -->
+  <link rel="stylesheet" href="../css/adminlte.css" />
+
+  <style>
+    body {
+      font-weight: 500;
+      overflow-y: scroll;
+    }
+
+    .brand-logo {
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      white-space: nowrap;
+    }
+
+    .brand-main {
+      font-weight: 900;
+    }
+
+    .brand-sub {
+      font-weight: 1200;
+      margin-left: 4px;
+      color: #35393d; /* subtle contrast */
+    }
+
+    .register-box {
+      width: 360px;
+    }
+
+    .register-logo a {
+      font-weight: 800;
+      letter-spacing: 0.75px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .register-logo a b {
+      font-weight: 900;
+    }
+
+    .register-box {
+      width: 360px;
+      margin-top: 1.25rem;   /* pushes form down, keeps logo clear */
+    }
+
+    .register-box-msg {
+      font-weight: 600;
+      color: #2c2c2c;
+    }
+
+    .form-control {
+      background-color: #f1f3f5;
+      border: 1.5px solid #adb5bd;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+
+    .form-control:focus {
+      background-color: #ffffff;
+      border-color: #343a40;
+      box-shadow: none;
+    }
+
+    .input-group-text {
+      background-color: #e9ecef;
+      border: 1.5px solid #adb5bd;
+    }
+
+    .form-check-label {
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background-color: #212529;
+      border-color: #212529;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #000000;
+    }
+
+    .btn-facebook {
+      background-color: #2960a8;
+      border-color: #2960a8;
+      font-weight: 600;
+    }
+
+    .btn-facebook:hover {
+      background-color: #0b4592;
+    }
+
+    .btn-google {
+      background-color: #c42923;
+      border-color: #c42923;
+      font-weight: 600;
+    }
+
+    .btn-google:hover {
+      background-color: #9c160c;
+    }
+  </style>
+</head>
+
+<body class="register-page bg-body-secondary">
+<div class="register-box">
+
+  <div class="register-logo">
+    <a href="#" class="brand-logo">
+      <span class="brand-main">Apartment</span>
+      <span class="brand-sub">Easy</span>
+    </a>
+  </div>
+
+  <div class="card shadow-sm">
+    <div class="card-body register-card-body">
+
+      <p class="register-box-msg">Create a new account</p>
+
+      <form action="../index.html" method="post">
+
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            name="firstName"
+            class="form-control"
+            placeholder="First Name"
+            required
+          />
+          <div class="input-group-text">
+            <span class="bi bi-person"></span>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            name="lastName"
+            class="form-control"
+            placeholder="Last Name"
+            required
+          />
+          <div class="input-group-text">
+            <span class="bi bi-person"></span>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Email"
+            required
+          />
+          <div class="input-group-text">
+            <span class="bi bi-envelope"></span>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <input
+            type="tel"
+            name="phone"
+            class="form-control"
+            placeholder="Phone Number"
+            required
+          />
+          <div class="input-group-text">
+            <span class="bi bi-telephone"></span>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            name="username"
+            class="form-control"
+            placeholder="Username"
+            required
+          />
+          <div class="input-group-text">
+            <span class="bi bi-person-badge"></span>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            placeholder="Password"
+            required
+          />
+          <div class="input-group-text">
+            <span class="bi bi-lock-fill"></span>
+          </div>
+        </div>
+
+        <div class="d-grid mb-3">
+          <button type="submit" class="btn btn-primary">
+            Create Account
+          </button>
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center mb-4 d-grid gap-2">
+        <p class="fw-semibold text-muted">— OR —</p>
+
+        <a href="#" class="btn btn-facebook text-white">
+          <i class="bi bi-facebook me-2"></i> Sign up with Facebook
+        </a>
+
+        <a href="#" class="btn btn-google text-white">
+          <i class="bi bi-google me-2"></i> Sign up with Google
+        </a>
+      </div>
+
+      <p class="text-center fw-semibold mb-0">
+        Already have an account?
+        <a href="login.html">Sign in</a>
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<script src="../js/adminlte.js"></script>
+</body>
+</html>
