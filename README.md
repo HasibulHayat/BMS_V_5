@@ -12,6 +12,7 @@ A full-stack Apartment Management System for managing residents, owners, notific
 BMS_V_5/
 <br>
  ├── backend
+ <br>
  ├── frontend
 
 ## Features
