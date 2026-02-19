@@ -1,0 +1,17 @@
+# Use Java 21 (matches your build.gradle)
+FROM eclipse-temurin:21-jdk
+
+WORKDIR /app
+
+# Copy everything
+COPY . .
+
+# Build the project
+RUN ./gradlew clean build -x test
+
+# Expose port
+EXPOSE 8080
+
+# Run the Spring Boot jar (NOT the plain one)
+CMD ["java", "-jar", "build/libs/backend-0.0.1-SNAPSHOT.jar"]
+
