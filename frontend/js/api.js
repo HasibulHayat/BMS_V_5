@@ -44,9 +44,8 @@ async function request(method, url, body = null) {
 
   // 🔒 Unauthorized → force logout
   if (response.status === 401) {
-    localStorage.removeItem("accessToken");
-    localStorage.removeItem("tokenExpiration");
-    window.location.href = "/login.html";
+    localStorage.clear();
+    window.location.replace('/auth/login.html');
     return;
   }
 

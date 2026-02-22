@@ -44,7 +44,10 @@ public class AuthService {
         Set<String> roles = userAuthRepo.findActiveRoleNamesByEmail(request.getEmail());
 
         String token = jwtService.generateToken(user.getId(), roles);
-        long expiration = 120000;
+
+        long expiration = jwtService
+                .extractExpiration(token)
+                .toEpochMilli();
 
         return LoginResponse.builder()
                 .accessToken(token)

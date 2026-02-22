@@ -6,11 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableBody = document.getElementById('adminTableBody');
   const addBtn = document.getElementById('addAdminBtn');
 
-  if (!TOKEN) {
-    window.location.href = '../login.html';
-    return;
-  }
-
   addBtn?.addEventListener('click', () => {
     window.location.href = '../pages/add-admin.html';
   });

@@ -8,11 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableBody = document.getElementById('memberTableBody');
   const addBtn = document.getElementById('addMemberBtn');
 
-  if (!TOKEN) {
-    window.location.href = '../login.html';
-    return;
-  }
-
   if (addBtn) {
     addBtn.addEventListener('click', () => {
       window.location.href = '../pages/add-member.html';

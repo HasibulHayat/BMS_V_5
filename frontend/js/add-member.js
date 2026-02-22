@@ -8,11 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('addMemberForm');
   const buildingSelect = document.getElementById('buildingId');
 
-  if (!TOKEN) {
-    window.location.href = '../login.html';
-    return;
-  }
-
   if (!form || !buildingSelect) return;
 
   async function loadBuildings() {

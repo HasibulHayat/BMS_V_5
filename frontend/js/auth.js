@@ -1,10 +1,14 @@
 // auth.js
 
 const API_BASE_URL = "http://localhost:8080/api/v1";
+const LOGIN_PAGE = "/auth/login.html";
+const HOME_PAGE = "/home.html";
 
+// =======================
+// LOGIN
+// =======================
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
-
   if (!form) return;
 
   form.addEventListener("submit", async (e) => {
@@ -21,9 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const response = await fetch(`${API_BASE_URL}/auth/login`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password })
       });
 
@@ -34,14 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // ✅ Store JWT
+      // Store token
       localStorage.setItem("accessToken", data.accessToken);
 
-      // Optional: store expiration if you want later
-      localStorage.setItem("tokenExpiration", data.expiration);
+      // Store REAL expiration timestamp
+      const expirationTimestamp = Date.now() + data.expiration;
+      localStorage.setItem("tokenExpiration", expirationTimestamp);
 
-      // ✅ Redirect to dashboard
-      window.location.href = "../home.html";
+      window.location.replace(HOME_PAGE);
 
     } catch (error) {
       console.error(error);
@@ -50,13 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// auth.js (add at bottom)
-
+// =======================
+// LOGOUT (SINGLE SOURCE)
+// =======================
 function logout() {
   localStorage.removeItem("accessToken");
   localStorage.removeItem("tokenExpiration");
-  window.location.href = "/login.html";
+  localStorage.removeItem("currentUser");
+
+  window.location.replace(LOGIN_PAGE);
 }
 
-// expose globally
 window.logout = logout;

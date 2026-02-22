@@ -5,11 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.getElementById('addAdminForm');
 
-  if (!TOKEN) {
-    window.location.href = '../login.html';
-    return;
-  }
-
   if (!form) return;
 
   form.addEventListener('submit', async (e) => {

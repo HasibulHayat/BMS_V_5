@@ -5,13 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   logoutBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // 1️⃣ Remove auth data
-    localStorage.removeItem("accessToken");
+    // Clear everything related to auth
+    localStorage.clear();
 
-    // (optional but good)
-    localStorage.removeItem("currentUser");
-
-    // 2️⃣ Redirect to login
-    window.location.href = "../auth/login.html";
+    // Redirect safely (prevents back navigation issues)
+    window.location.replace("/auth/login.html");
   });
 });
