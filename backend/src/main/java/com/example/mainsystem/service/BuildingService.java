@@ -26,7 +26,7 @@ public class BuildingService {
     }
 
     public BuildingResponse createBuilding(BuildingCreateRequest request) {
-        if (!currentUser.hasAnyRole("SUPER_ADMIN", "ADMIN")) {
+        if (!currentUser.hasAnyRole("SUPER_ADMIN")) {
             throw new AuthException("You are not allowed to perform this action");
         }
 
@@ -59,8 +59,34 @@ public class BuildingService {
                 .name(building.getName())
                 .buildingCode(building.getBuildingCode())
                 .registrationNumber(building.getRegistrationNumber())
+                .buildingType(building.getBuildingType())
+                .description(building.getDescription())
+                .fullAddress(building.getFullAddress())
+                .street(building.getStreet())
+                .area(building.getArea())
                 .city(building.getCity())
+                .district(building.getDistrict())
                 .country(building.getCountry())
+                .postalCode(building.getPostalCode())
+                .latitude(building.getLatitude())
+                .longitude(building.getLongitude())
+                .totalFloor(building.getTotalFloor())
+                .basementFloor(building.getBasementFloor())
+                .totalUnit(building.getTotalUnit())
+                .constructionStart(building.getConstructionStart())
+                .constructionEnd(building.getConstructionEnd())
+                .elevatorCount(building.getElevatorCount())
+                .hasGenerator(building.getHasGenerator())
+                .totalParking(building.getTotalParking())
+                .hasGuard(building.getHasGuard())
+                .hasCCTV(building.getHasCCTV())
+                .waterSource(building.getWaterSource())
+                .landAreaSqFt(building.getLandAreaSqFt())
+                .floorAreaSqFt(building.getFloorAreaSqFt())
+                .unitAreaSqFt(building.getUnitAreaSqFt())
+                .developerName(building.getDeveloperName())
+                .ownerAssociationName(building.getOwnerAssociationName())
+                .notes(building.getNotes())
                 .build();
     }
 
@@ -81,19 +107,65 @@ public class BuildingService {
         building.setDistrict(request.getDistrict());
         building.setCountry(request.getCountry());
         building.setPostalCode(request.getPostalCode());
+        building.setFullAddress(request.getFullAddress());
+        building.setLatitude(request.getLatitude());
+        building.setLongitude(request.getLongitude());
+        building.setTotalFloor(request.getTotalFloor());
+        building.setBasementFloor(request.getBasementFloor());
+        building.setTotalUnit(request.getTotalUnit());
+        building.setConstructionStart(request.getConstructionStart());
+        building.setConstructionEnd(request.getConstructionEnd());
+        building.setElevatorCount(request.getElevatorCount());
+        building.setHasGenerator(request.getHasGenerator());
+        building.setTotalParking(request.getTotalParking());
+        building.setHasGuard(request.getHasGuard());
+        building.setHasCCTV(request.getHasCCTV());
+        building.setWaterSource(request.getWaterSource());
+        building.setLandAreaSqFt(request.getLandAreaSqFt());
+        building.setFloorAreaSqFt(request.getFloorAreaSqFt());
+        building.setUnitAreaSqFt(request.getUnitAreaSqFt());
+        building.setDeveloperName(request.getDeveloperName());
+        building.setOwnerAssociationName(request.getOwnerAssociationName());
+        building.setNotes(request.getNotes());
 
         return BuildingResponse.builder()
                 .id(building.getId())
                 .name(building.getName())
                 .buildingCode(building.getBuildingCode())
                 .registrationNumber(building.getRegistrationNumber())
+                .buildingType(building.getBuildingType())
+                .description(building.getDescription())
+                .fullAddress(building.getFullAddress())
+                .street(building.getStreet())
+                .area(building.getArea())
                 .city(building.getCity())
+                .district(building.getDistrict())
                 .country(building.getCountry())
+                .postalCode(building.getPostalCode())
+                .latitude(building.getLatitude())
+                .longitude(building.getLongitude())
+                .totalFloor(building.getTotalFloor())
+                .basementFloor(building.getBasementFloor())
+                .totalUnit(building.getTotalUnit())
+                .constructionStart(building.getConstructionStart())
+                .constructionEnd(building.getConstructionEnd())
+                .elevatorCount(building.getElevatorCount())
+                .hasGenerator(building.getHasGenerator())
+                .totalParking(building.getTotalParking())
+                .hasGuard(building.getHasGuard())
+                .hasCCTV(building.getHasCCTV())
+                .waterSource(building.getWaterSource())
+                .landAreaSqFt(building.getLandAreaSqFt())
+                .floorAreaSqFt(building.getFloorAreaSqFt())
+                .unitAreaSqFt(building.getUnitAreaSqFt())
+                .developerName(building.getDeveloperName())
+                .ownerAssociationName(building.getOwnerAssociationName())
+                .notes(building.getNotes())
                 .build();
     }
 
     public BuildingResponse getBuilding(UUID id) {
-        if (!currentUser.hasAnyRole("SUPER_ADMIN", "ADMIN")) {
+        if (!currentUser.hasAnyRole("SUPER_ADMIN", "ADMIN", "OWNER")) {
             throw new AuthException("You are not allowed to perform this action");
         }
 
@@ -105,13 +177,39 @@ public class BuildingService {
                 .name(building.getName())
                 .buildingCode(building.getBuildingCode())
                 .registrationNumber(building.getRegistrationNumber())
+                .buildingType(building.getBuildingType())
+                .description(building.getDescription())
+                .fullAddress(building.getFullAddress())
+                .street(building.getStreet())
+                .area(building.getArea())
                 .city(building.getCity())
+                .district(building.getDistrict())
                 .country(building.getCountry())
+                .postalCode(building.getPostalCode())
+                .latitude(building.getLatitude())
+                .longitude(building.getLongitude())
+                .totalFloor(building.getTotalFloor())
+                .basementFloor(building.getBasementFloor())
+                .totalUnit(building.getTotalUnit())
+                .constructionStart(building.getConstructionStart())
+                .constructionEnd(building.getConstructionEnd())
+                .elevatorCount(building.getElevatorCount())
+                .hasGenerator(building.getHasGenerator())
+                .totalParking(building.getTotalParking())
+                .hasGuard(building.getHasGuard())
+                .hasCCTV(building.getHasCCTV())
+                .waterSource(building.getWaterSource())
+                .landAreaSqFt(building.getLandAreaSqFt())
+                .floorAreaSqFt(building.getFloorAreaSqFt())
+                .unitAreaSqFt(building.getUnitAreaSqFt())
+                .developerName(building.getDeveloperName())
+                .ownerAssociationName(building.getOwnerAssociationName())
+                .notes(building.getNotes())
                 .build();
     }
 
     public List<BuildingResponse> getAllBuildings() {
-        if (!currentUser.hasAnyRole("SUPER_ADMIN", "ADMIN")) {
+        if (!currentUser.hasAnyRole("SUPER_ADMIN", "ADMIN", "OWNER")) {
             throw new AuthException("You are not allowed to perform this action");
         }
 
@@ -124,8 +222,34 @@ public class BuildingService {
                     .name(building.getName())
                     .buildingCode(building.getBuildingCode())
                     .registrationNumber(building.getRegistrationNumber())
+                    .buildingType(building.getBuildingType())
+                    .description(building.getDescription())
+                    .fullAddress(building.getFullAddress())
+                    .street(building.getStreet())
+                    .area(building.getArea())
                     .city(building.getCity())
+                    .district(building.getDistrict())
                     .country(building.getCountry())
+                    .postalCode(building.getPostalCode())
+                    .latitude(building.getLatitude())
+                    .longitude(building.getLongitude())
+                    .totalFloor(building.getTotalFloor())
+                    .basementFloor(building.getBasementFloor())
+                    .totalUnit(building.getTotalUnit())
+                    .constructionStart(building.getConstructionStart())
+                    .constructionEnd(building.getConstructionEnd())
+                    .elevatorCount(building.getElevatorCount())
+                    .hasGenerator(building.getHasGenerator())
+                    .totalParking(building.getTotalParking())
+                    .hasGuard(building.getHasGuard())
+                    .hasCCTV(building.getHasCCTV())
+                    .waterSource(building.getWaterSource())
+                    .landAreaSqFt(building.getLandAreaSqFt())
+                    .floorAreaSqFt(building.getFloorAreaSqFt())
+                    .unitAreaSqFt(building.getUnitAreaSqFt())
+                    .developerName(building.getDeveloperName())
+                    .ownerAssociationName(building.getOwnerAssociationName())
+                    .notes(building.getNotes())
                     .build();
 
             responses.add(response);

@@ -72,3 +72,11 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   appearance: textfield;
 }
+
+.table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}

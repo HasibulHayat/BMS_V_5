@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AE | Building</title>
+    <title>AE | Dashboard</title>
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
@@ -124,7 +124,7 @@
                 </li>
                 <!--end::User Image-->
                 <!--begin::Menu Body-->
-               <li>
+                <li>
                   <a href="../pages/profile.html" class="dropdown-item">
                     <i class="bi bi-person me-2"></i> Profile
                   </a>
@@ -160,8 +160,7 @@
         <!--end::Container-->
       </nav>
       <!--end::Header-->
-
-<!--begin::Sidebar-->
+      <!--begin::Sidebar-->
       <aside class="app-sidebar bg-dark-subtle" data-bs-theme="dark">
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
@@ -175,7 +174,7 @@
             />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
-            <span class="brand-text fw-light">Admins</span>
+            <span class="brand-text fw-light">Home</span>
             <!--end::Brand Text-->
           </a>
           <!--end::Brand Link-->
@@ -336,73 +335,61 @@
         <!--end::Sidebar Wrapper-->
       </aside>
       <!--end::Sidebar-->
-      
+
       <!--begin::App Main-->
-<main class="app-main">
+      <main class="app-main">
 
-  <!-- PAGE HEADER -->
-  <div class="app-content-header">
-    <div class="container-fluid">
-      <div class="row">
-
-        <!-- LEFT: PAGE TITLE -->
-        <div class="col-sm-6">
-          <h3 class="mb-0">Buildings</h3>
+        <div class="app-content-header">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <h3 class="mb-0">Building Details</h3>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- RIGHT: BREADCRUMB -->
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-end mb-0">
-            <li class="breadcrumb-item active"></li>
-            <li class="breadcrumb-item active">Information</li>
-            <li class="breadcrumb-item"><a href="#">Buildings</a></li>
-          </ol>
+        <div class="app-content">
+          <div class="container-fluid">
+
+            <!-- BASIC INFORMATION -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="mb-0">Basic Information</h5>
+              </div>
+              <div class="card-body" id="basicInfo"></div>
+            </div>
+
+            <!-- LOCATION -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="mb-0">Location</h5>
+              </div>
+              <div class="card-body" id="locationInfo"></div>
+            </div>
+
+            <!-- STRUCTURE -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="mb-0">Structure Details</h5>
+              </div>
+              <div class="card-body" id="structureInfo"></div>
+            </div>
+
+            <!-- FACILITIES -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h5 class="mb-0">Facilities & Additional Info</h5>
+              </div>
+              <div class="card-body" id="facilityInfo"></div>
+            </div>
+
+          </div>
         </div>
 
-      </div>
-    </div>
-  </div>
-
-  <!-- PAGE BODY -->
-  <div class="app-content">
-    <div class="container-fluid">
-
-      <!-- ACTION BAR -->
-      <div class="d-flex justify-content-end mb-3">
-        <button class="btn btn-primary d-none" id="addBuildingBtn">
-          <i class="bi bi-plus-lg me-1"></i> Add Building
-        </button>
-      </div>
-
-      <!-- TABLE -->
-      <div class="card">
-        <div class="card-body p-0">
-
-          <table class="table table-hover mb-0">
-            <thead class="table-light">
-              <tr>
-                <th>Building</th>
-                <th>Total Floors</th>
-                <th>Total Units</th>
-                <th>Features</th>
-                <th class="text-end">Actions</th>
-              </tr>
-            </thead>
-
-            <tbody id="buildingTableBody">
-              <!-- populated by building.js -->
-            </tbody>
-          </table>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</main>
+      </main>
       <!--end::App Main-->
-
+      
       <!--begin::Footer-->
       <footer class="app-footer">
         <!--begin::To the end-->
@@ -440,8 +427,7 @@
     <script src="../js/adminlte.js"></script>
     <script src="../js/logout.js"></script>
     <script type="module" src="../js/navbar-user.js"></script>
-    <script src="../js/building.js"></script>
-
+    <script src="../js/view-building.js"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
@@ -651,7 +637,6 @@
       const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
       sparkline3.render();
     </script>
-
     <!--end::Script-->
   </body>
   <!--end::Body-->
