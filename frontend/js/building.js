@@ -78,43 +78,49 @@ document.addEventListener("DOMContentLoaded", async () => {
         currentRoles.includes("OWNER");
 
       const buildingTypeBadge = b.buildingType
-        ? `<span class="badge bg-info-subtle text-dark">${b.buildingType}</span>`
+        ? `<span class="badge bg-success-subtle text-dark">${b.buildingType}</span>`
         : "";
-
-      const locationLine = `
-        ${b.city || ""}${b.city && b.country ? ", " : ""}${b.country || ""}
-      `;
-
-      const featureIcons = `
-        ${b.hasGenerator ? '<i class="bi bi-lightning-charge text-warning me-2" title="Generator"></i>' : ''}
-        ${b.hasCCTV ? '<i class="bi bi-camera-video text-primary me-2" title="CCTV"></i>' : ''}
-        ${b.elevatorCount ? '<i class="bi bi-arrow-up-square text-secondary me-2" title="Elevators"></i>' : ''}
-        ${b.totalParking ? '<i class="bi bi-p-square text-success me-2" title="Parking"></i>' : ''}
-      `;
 
       const tr = document.createElement("tr");
 
       tr.innerHTML = `
+        <!-- BUILDING COLUMN -->
         <td>
           <div class="fw-semibold">${b.name}</div>
-          <div class="small text-muted">
-            ${b.buildingCode || "-"} • ${b.registrationNumber || "-"}
-          </div>
-          <div class="small text-muted mt-1">
+
+          <div class="mt-2">
             ${buildingTypeBadge}
-            ${locationLine}
           </div>
         </td>
 
-        <td>${b.totalFloor ?? "-"}</td>
-        <td>${b.totalUnit ?? "-"}</td>
+        <!-- ADDRESS COLUMN -->
+        <td>
+          <div class="">
+            <div>${b.street || ""}</div>
+            <div>${b.area || ""}</div>
+            <div>
+              ${b.city || ""}${b.city && b.district ? ", " : ""}${b.district || ""}
+            </div>
+            <div>
+              ${b.country || ""}${b.postalCode ? " - " + b.postalCode : ""}
+            </div>
+          </div>
+        </td>
 
-        <td>${featureIcons || '<span class="text-muted">-</span>'}</td>
+        <!-- FEATURES COLUMN -->
+        <td>
+          <div class="">
+            <div>${b.totalFloor ?? "-"} Floors</div>
+            <div>${b.totalUnit ?? "-"} Units</div>
+            <div class="text-muted">${b.ownerAssociationName || "-"}</div>
+          </div>
+        </td>
 
+        <!-- ACTIONS COLUMN -->
         <td class="text-end">
           ${
             canView
-              ? `<button class="btn btn-sm btn-outline-secondary me-2"
+              ? `<button class="btn btn-sm btn-outline-success me-2"
                     onclick="viewBuilding('${b.id}')">
                     <i class="bi bi-eye"></i>
                 </button>`
@@ -139,7 +145,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   function renderEmptyState() {
     tableBody.innerHTML = `
       <tr>
-        <td colspan="5" class="text-center py-5">
+        <td colspan="4" class="text-center py-5">
           <div class="text-muted">
             <i class="bi bi-building fs-2 d-block mb-3"></i>
             <div class="fw-semibold">No buildings found</div>

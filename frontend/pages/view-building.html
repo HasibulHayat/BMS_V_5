@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AE | Dashboard</title>
+    <title>AE | View Building</title>
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
@@ -174,7 +174,7 @@
             />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
-            <span class="brand-text fw-light">Home</span>
+            <span class="brand-text fw-light">Buildings</span>
             <!--end::Brand Text-->
           </a>
           <!--end::Brand Link-->
@@ -339,55 +339,79 @@
       <!--begin::App Main-->
       <main class="app-main">
 
-        <div class="app-content-header">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-6">
-                <h3 class="mb-0">Building Details</h3>
-              </div>
-            </div>
-          </div>
+  <div class="app-content-header">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between align-items-center">
+        <h3 class="mb-0">Building Overview</h3>
+        <a href="../pages/building.html" class="btn btn-outline-success btn-sm">
+          ← Back to Buildings
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-content">
+    <div class="container-fluid">
+
+      <!-- BASIC -->
+      <div class="card shadow-sm mb-4 card-top-blue">
+        <div class="card-header bg-light">
+          <h6 class="mb-0">
+            <i class="bi bi-building me-2"></i>
+            Basic Information
+          </h6>
         </div>
+        <div class="card-body" id="basicInfo"></div>
+      </div>
 
-        <div class="app-content">
-          <div class="container-fluid">
-
-            <!-- BASIC INFORMATION -->
-            <div class="card mb-4">
-              <div class="card-header">
-                <h5 class="mb-0">Basic Information</h5>
-              </div>
-              <div class="card-body" id="basicInfo"></div>
-            </div>
-
-            <!-- LOCATION -->
-            <div class="card mb-4">
-              <div class="card-header">
-                <h5 class="mb-0">Location</h5>
-              </div>
-              <div class="card-body" id="locationInfo"></div>
-            </div>
-
-            <!-- STRUCTURE -->
-            <div class="card mb-4">
-              <div class="card-header">
-                <h5 class="mb-0">Structure Details</h5>
-              </div>
-              <div class="card-body" id="structureInfo"></div>
-            </div>
-
-            <!-- FACILITIES -->
-            <div class="card mb-4">
-              <div class="card-header">
-                <h5 class="mb-0">Facilities & Additional Info</h5>
-              </div>
-              <div class="card-body" id="facilityInfo"></div>
-            </div>
-
-          </div>
+      <!-- LOCATION -->
+      <div class="card shadow-sm mb-4 card-top-blue">
+        <div class="card-header bg-light">
+          <h6 class="mb-0">
+            <i class="bi bi-geo-alt me-2"></i>
+            Location
+          </h6>
         </div>
+        <div class="card-body" id="locationInfo"></div>
+      </div>
 
-      </main>
+      <!-- STRUCTURE -->
+      <div class="card shadow-sm mb-4 card-top-blue">
+        <div class="card-header bg-light">
+          <h6 class="mb-0">
+            <i class="bi bi-layers me-2"></i>
+            Structure Details
+          </h6>
+        </div>
+        <div class="card-body" id="structureInfo"></div>
+      </div>
+
+      <!-- FACILITIES -->
+      <div class="card shadow-sm mb-4 card-top-blue">
+        <div class="card-header bg-light">
+          <h6 class="mb-0">
+            <i class="bi bi-shield-check me-2"></i>
+            Facilities
+          </h6>
+        </div>
+        <div class="card-body" id="facilityInfo"></div>
+      </div>
+
+      <!-- ADDITIONAL INFO -->
+<div class="card shadow-sm mb-4 card-top-blue">
+  <div class="card-header bg-light">
+    <h6 class="mb-0">
+      <i class="bi bi-info-circle me-2"></i>
+      Additional Information
+    </h6>
+  </div>
+  <div class="card-body" id="additionalInfo"></div>
+</div>
+
+    </div>
+  </div>
+
+</main>
       <!--end::App Main-->
       
       <!--begin::Footer-->

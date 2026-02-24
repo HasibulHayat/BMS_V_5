@@ -80,3 +80,100 @@ input[type="number"] {
 .table tbody tr:hover {
   background-color: #f8f9fa;
 }
+
+.hero-building {
+  background: linear-gradient(135deg, #2b3b52, #4a91fc);
+  color: white;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.hero-building small {
+  opacity: 0.85;
+}
+
+.card-top-blue {
+  border-top: 4px solid #3971c5;
+}
+
+.facility-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.structure-metric {
+  border-radius: 12px;
+  padding: 25px 15px;
+  color: white;
+  transition: 0.2s;
+}
+
+.structure-metric:hover {
+  transform: translateY(-4px);
+}
+
+.metric-icon {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.metric-blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.metric-green { background: linear-gradient(135deg, #22c55e, #16a34a); }
+.metric-purple { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.metric-orange { background: linear-gradient(135deg, #f97316, #ea580c); }
+
+
+.construction-box {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.timeline-item i {
+  font-size: 22px;
+  color: #0d6efd;
+}
+
+
+.area-box {
+  background: transparent;
+  padding: 0;
+}
+
+.area-item {
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.2s;
+}
+
+.area-item:hover {
+  transform: translateY(-3px);
+}
+
+.area-land {
+  background: #e7f1ff;
+  color: #0d6efd;
+}
+
+.area-floor {
+  background: #e9f7ef;
+  color: #198754;
+}
+
+.area-unit {
+  background: #f3e8ff;
+  color: #6f42c1;
+}
+
+.area-item i {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
