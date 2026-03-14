@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/superadmin/admins")
@@ -28,6 +29,11 @@ public class AdminController {
     @GetMapping
     public ResponseEntity<List<AdminListResponse>> getAdmins() {
         return ResponseEntity.ok(adminService.getAllAdmins());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<AdminListResponse> getAdminById(@PathVariable UUID id) {
+        return ResponseEntity.ok(adminService.getAdminById(id));
     }
 
 }

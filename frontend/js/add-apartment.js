@@ -5,9 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.getElementById('addApartmentForm');
   const buildingSelect = document.getElementById('buildingId');
+  const floorSelect = document.getElementById('floorNumber');
+  const sectorSelect = document.getElementById('sectorName');
 
   if (!form || !buildingSelect) return;
 
+  // -----------------------------
+  // LOAD BUILDINGS
+  // -----------------------------
   async function loadBuildings() {
     try {
       const res = await fetch(`${API_BASE}/buildings`, {
@@ -32,16 +37,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // -----------------------------
+  // FORM SUBMIT
+  // -----------------------------
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    if (!buildingSelect.value) {
+      alert("Please select a building");
+      return;
+    }
+
+    const floorNumber = floorSelect.value
+      ? Number(floorSelect.value)
+      : null;
+
+    const sectorName = sectorSelect.value || null;
+
+    // Generate apartment name automatically
+    let generatedName = null;
+
+    if (floorNumber && sectorName) {
+      generatedName = `${floorNumber} / ${sectorName}`;
+    } else {
+      alert("Floor and Sector are required to generate apartment name");
+      return;
+    }
+
     const payload = {
       buildingId: buildingSelect.value,
-      name: document.getElementById('name').value.trim(),
-      floorNumber: document.getElementById('floorNumber').value
-        ? Number(document.getElementById('floorNumber').value)
-        : null,
-      sectorName: document.getElementById('sectorName').value || null,
+      name: generatedName,
+      floorNumber: floorNumber,
+      sectorName: sectorName,
       totalRoom: document.getElementById('totalRoom').value
         ? Number(document.getElementById('totalRoom').value)
         : null,
@@ -90,4 +117,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   loadBuildings();
+
 });

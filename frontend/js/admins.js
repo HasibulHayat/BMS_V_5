@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       admins.forEach(admin => {
         const tr = document.createElement('tr');
+
         tr.innerHTML = `
           <td>${admin.firstName} ${admin.lastName}</td>
           <td>${admin.phone ?? '-'}</td>
@@ -35,11 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
             </span>
           </td>
           <td class="text-end">
-            <button class="btn btn-sm btn-outline-secondary" disabled>
-              Edit
-            </button>
+
+            <a href="./view-admin.html?id=${admin.id}"
+              class="btn btn-sm btn-outline-success me-2">
+              <i class="bi bi-eye"></i>
+            </a>
+
+            <a href="./edit-admin.html?id=${admin.id}"
+              class="btn btn-sm btn-outline-primary">
+              <i class="bi bi-pencil"></i>
+            </a>
+
           </td>
         `;
+
         tableBody.appendChild(tr);
       });
 

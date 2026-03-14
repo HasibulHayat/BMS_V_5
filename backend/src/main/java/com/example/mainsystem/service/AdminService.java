@@ -18,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 
 @Service
@@ -123,4 +124,32 @@ public class AdminService {
                 .toList();
     }
 
+    public AdminListResponse getAdminById(UUID id) {
+
+        if (!currentUser.hasRole("SUPER_ADMIN")) {
+            throw new AuthException("You are not allowed to view this admin");
+        }
+
+        UserAuth userAuth = userAuthRepo.findById(id)
+                .orElseThrow(() -> new AuthException("Admin not found"));
+
+        // Optional safety check: ensure user actually has ADMIN role
+        boolean isAdmin = userAuth.getRoles().stream()
+                .anyMatch(r -> r.getRole().getRoleName().equals("ADMIN"));
+
+        if (!isAdmin) {
+            throw new AuthException("User is not an admin");
+        }
+
+        UserProfile p = userAuth.getUserProfile();
+
+        return AdminListResponse.builder()
+                .id(userAuth.getId())
+                .firstName(p.getFirstName())
+                .lastName(p.getLastName())
+                .phone(p.getPhonePrimary())
+                .email(userAuth.getEmail())
+                .isActive(userAuth.getIsActive())
+                .build();
+    }
 }

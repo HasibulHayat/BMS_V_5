@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AE | Add Apartment</title>
+    <title>AE | Dashboard</title>
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
@@ -124,7 +124,7 @@
                 </li>
                 <!--end::User Image-->
                 <!--begin::Menu Body-->
-               <li>
+                <li>
                   <a href="../pages/profile.html" class="dropdown-item">
                     <i class="bi bi-person me-2"></i> Profile
                   </a>
@@ -174,7 +174,7 @@
             />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
-            <span class="brand-text fw-light">Apartments</span>
+            <span class="brand-text fw-light">Home</span>
             <!--end::Brand Text-->
           </a>
           <!--end::Brand Link-->
@@ -336,141 +336,66 @@
       </aside>
       <!--end::Sidebar-->
       <!--begin::App Main-->
-      <main class="app-main">
+<main class="app-main">
 
-  <!-- Page Header -->
+  <!-- PAGE HEADER -->
   <div class="app-content-header">
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-sm-6">
-          <h3 class="mb-0">Add Apartment</h3>
+          <h3 class="mb-0">Admin Details</h3>
         </div>
+
         <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-end">
+          <ol class="breadcrumb float-sm-end mb-0">
             <li class="breadcrumb-item active"></li>
             <li class="breadcrumb-item active">Information</li>
-            <li class="breadcrumb-item active">Apartments</li>
-            <li class="breadcrumb-item"><a href="#">Add</a></li>
+            <li class="breadcrumb-item active">People</li>
+            <li class="breadcrumb-item">
+              <a href="./admins.html">Admins</a>
+            </li>
+            <li class="breadcrumb-item active">View</li>
           </ol>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Content -->
+  <!-- CONTENT -->
   <div class="app-content">
     <div class="container-fluid">
-      <div class="row justify-content-center">
 
-        <div class="col-lg-8">
-          <div class="card card-primary card-outline">
-
-            <div class="card-header">
-              <h5 class="card-title mb-0"><b>Apartment Information</b></h5>
-            </div>
-
-            <div class="card-body">
-              <form id="addApartmentForm">
-
-                <div class="mb-3">
-                  <label class="form-label">Building *</label>
-                  <select class="form-select" id="buildingId" required>
-                    <option value="">Select Building</option>
-                  </select>
-                </div>
-
-                <!-- Floor & Sector -->
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <label class="form-label">Floor Number</label>
-                    <select class="form-select" id="floorNumber">
-                      <option value="">Select Floor</option>
-                      <!-- 1–13 -->
-                      <script>
-                        for (let i = 1; i <= 13; i++) {
-                          document.write(`<option value="${i}">${i}</option>`);
-                        }
-                      </script>
-                    </select>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label class="form-label">Sector</label>
-                    <select class="form-select" id="sectorName">
-                      <option value="">Select Sector</option>
-                      <option value="A">A</option>
-                      <option value="B">B</option>
-                      <option value="C">C</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Rooms -->
-                <div class="row mb-3">
-                  <div class="col-md-3">
-                    <label class="form-label">Total Rooms</label>
-                    <input type="number" class="form-control" id="totalRoom" />
-                  </div>
-                  <div class="col-md-3">
-                    <label class="form-label">Bedrooms</label>
-                    <input type="number" class="form-control" id="totalBedroom" />
-                  </div>
-                  <div class="col-md-3">
-                    <label class="form-label">Bathrooms</label>
-                    <input type="number" class="form-control" id="totalBathroom" />
-                  </div>
-                  <div class="col-md-3">
-                    <label class="form-label">Balconies</label>
-                    <input type="number" class="form-control" id="totalBalconies" />
-                  </div>
-                </div>
-
-                <!-- Area & Parking -->
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <label class="form-label">Area (Sq Ft)</label>
-                    <input type="number" step="0.01" class="form-control" id="areaSqFt" />
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label">Parking Spot Number</label>
-                    <input type="number" class="form-control" id="parkingSpotNumber" />
-                  </div>
-                </div>
-
-                <!-- Landphone -->
-                <div class="mb-3">
-                  <label class="form-label">Landphone Extension</label>
-                  <input type="text" class="form-control" id="landphoneExtension" />
-                </div>
-
-                <!-- Notes -->
-                <div class="mb-4">
-                  <label class="form-label">Notes</label>
-                  <textarea class="form-control" id="notes" rows="3"></textarea>
-                </div>
-
-                <!-- Actions -->
-                <div class="d-flex justify-content-end gap-2">
-                  <a href="apartments.html" class="btn btn-outline-secondary">
-                    Cancel
-                  </a>
-                  <button type="submit" class="btn btn-primary">
-                    Save Apartment
-                  </button>
-                </div>
-
-              </form>
-            </div>
-
-          </div>
-        </div>
-
+      <!-- HERO -->
+      <div class="card shadow-sm mb-4 card-top-primary">
+        <div class="card-body" id="adminHero"></div>
       </div>
+
+      <!-- CONTACT INFO -->
+      <div class="card shadow-sm mb-4 card-top-success">
+        <div class="card-header bg-white">
+          <h6 class="mb-0">
+            <i class="bi bi-telephone me-2"></i>
+            Contact Information
+          </h6>
+        </div>
+        <div class="card-body" id="contactInfo"></div>
+      </div>
+
+      <!-- ACCOUNT INFO -->
+      <div class="card shadow-sm mb-4 card-top-purple">
+        <div class="card-header bg-white">
+          <h6 class="mb-0">
+            <i class="bi bi-shield-lock me-2"></i>
+            Account Information
+          </h6>
+        </div>
+        <div class="card-body" id="accountInfo"></div>
+      </div>
+
     </div>
   </div>
 
 </main>
-
       <!--end::App Main-->
       <!--begin::Footer-->
       <footer class="app-footer">
@@ -510,7 +435,7 @@
     <script src="../js/logout.js"></script>
     <script type="module" src="../js/navbar-user.js"></script>
     <script src="../js/role-sidebar.js"></script>
-    <script src="../js/add-apartment.js"></script>
+    <script src="../js/view-admin.js"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';

@@ -69,10 +69,19 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="badge bg-secondary">Unknown</span>
       </td>
       <td class="text-end">
-        <a href="./edit-apartment.html?id=${apartment.id}"
-           class="btn btn-sm btn-outline-primary">
-          Edit
+
+        <a href="./view-apartment.html?id=${apartment.id}"
+          class="btn btn-sm btn-outline-success me-1"
+          title="View">
+          <i class="bi bi-eye"></i>
         </a>
+
+        <a href="./edit-apartment.html?id=${apartment.id}"
+          class="btn btn-sm btn-outline-primary me-1"
+          title="Edit">
+          <i class="bi bi-pencil"></i>
+        </a>
+
       </td>
     `;
 

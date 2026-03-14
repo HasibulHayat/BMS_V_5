@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AE | Add Apartment</title>
+    <title>AE | Dashboard</title>
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
@@ -124,7 +124,7 @@
                 </li>
                 <!--end::User Image-->
                 <!--begin::Menu Body-->
-               <li>
+                <li>
                   <a href="../pages/profile.html" class="dropdown-item">
                     <i class="bi bi-person me-2"></i> Profile
                   </a>
@@ -174,7 +174,7 @@
             />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
-            <span class="brand-text fw-light">Apartments</span>
+            <span class="brand-text fw-light">Home</span>
             <!--end::Brand Text-->
           </a>
           <!--end::Brand Link-->
@@ -336,28 +336,29 @@
       </aside>
       <!--end::Sidebar-->
       <!--begin::App Main-->
-      <main class="app-main">
+<main class="app-main">
 
-  <!-- Page Header -->
+  <!-- PAGE HEADER -->
   <div class="app-content-header">
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-sm-6">
-          <h3 class="mb-0">Add Apartment</h3>
+          <h3 class="mb-0">Edit Apartment</h3>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-end">
             <li class="breadcrumb-item active"></li>
             <li class="breadcrumb-item active">Information</li>
-            <li class="breadcrumb-item active">Apartments</li>
-            <li class="breadcrumb-item"><a href="#">Add</a></li>
+            <li class="breadcrumb-item">
+              <a href="./apartments.html">Apartments</a>
+            </li>
+            <li class="breadcrumb-item active">Edit</li>
           </ol>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Content -->
   <div class="app-content">
     <div class="container-fluid">
       <div class="row justify-content-center">
@@ -365,18 +366,26 @@
         <div class="col-lg-8">
           <div class="card card-primary card-outline">
 
-            <div class="card-header">
-              <h5 class="card-title mb-0"><b>Apartment Information</b></h5>
+            <div class="card-header bg-white">
+              <h6 class="mb-0">
+                <i class="bi bi-building me-2"></i>
+                Apartment Information
+              </h6>
             </div>
 
             <div class="card-body">
-              <form id="addApartmentForm">
+              <form id="editApartmentForm">
 
+                <!-- Building (readonly) -->
                 <div class="mb-3">
-                  <label class="form-label">Building *</label>
-                  <select class="form-select" id="buildingId" required>
-                    <option value="">Select Building</option>
-                  </select>
+                  <label class="form-label">Building</label>
+                  <input type="text" class="form-control" id="buildingName" disabled />
+                </div>
+
+                <!-- Auto Name -->
+                <div class="mb-3">
+                  <label class="form-label">Apartment Name</label>
+                  <input type="text" class="form-control" id="name" readonly />
                 </div>
 
                 <!-- Floor & Sector -->
@@ -385,12 +394,6 @@
                     <label class="form-label">Floor Number</label>
                     <select class="form-select" id="floorNumber">
                       <option value="">Select Floor</option>
-                      <!-- 1–13 -->
-                      <script>
-                        for (let i = 1; i <= 13; i++) {
-                          document.write(`<option value="${i}">${i}</option>`);
-                        }
-                      </script>
                     </select>
                   </div>
 
@@ -408,19 +411,19 @@
                 <!-- Rooms -->
                 <div class="row mb-3">
                   <div class="col-md-3">
-                    <label class="form-label">Total Rooms</label>
+                    <label>Total Rooms</label>
                     <input type="number" class="form-control" id="totalRoom" />
                   </div>
                   <div class="col-md-3">
-                    <label class="form-label">Bedrooms</label>
+                    <label>Bedrooms</label>
                     <input type="number" class="form-control" id="totalBedroom" />
                   </div>
                   <div class="col-md-3">
-                    <label class="form-label">Bathrooms</label>
+                    <label>Bathrooms</label>
                     <input type="number" class="form-control" id="totalBathroom" />
                   </div>
                   <div class="col-md-3">
-                    <label class="form-label">Balconies</label>
+                    <label>Balconies</label>
                     <input type="number" class="form-control" id="totalBalconies" />
                   </div>
                 </div>
@@ -428,34 +431,33 @@
                 <!-- Area & Parking -->
                 <div class="row mb-3">
                   <div class="col-md-6">
-                    <label class="form-label">Area (Sq Ft)</label>
+                    <label>Area (Sq Ft)</label>
                     <input type="number" step="0.01" class="form-control" id="areaSqFt" />
                   </div>
                   <div class="col-md-6">
-                    <label class="form-label">Parking Spot Number</label>
+                    <label>Parking Spot</label>
                     <input type="number" class="form-control" id="parkingSpotNumber" />
                   </div>
                 </div>
 
                 <!-- Landphone -->
                 <div class="mb-3">
-                  <label class="form-label">Landphone Extension</label>
+                  <label>Landphone Extension</label>
                   <input type="text" class="form-control" id="landphoneExtension" />
                 </div>
 
                 <!-- Notes -->
                 <div class="mb-4">
-                  <label class="form-label">Notes</label>
+                  <label>Notes</label>
                   <textarea class="form-control" id="notes" rows="3"></textarea>
                 </div>
 
-                <!-- Actions -->
                 <div class="d-flex justify-content-end gap-2">
-                  <a href="apartments.html" class="btn btn-outline-secondary">
+                  <a href="./apartments.html" class="btn btn-outline-secondary">
                     Cancel
                   </a>
                   <button type="submit" class="btn btn-primary">
-                    Save Apartment
+                    Save Changes
                   </button>
                 </div>
 
@@ -470,7 +472,6 @@
   </div>
 
 </main>
-
       <!--end::App Main-->
       <!--begin::Footer-->
       <footer class="app-footer">
@@ -510,7 +511,6 @@
     <script src="../js/logout.js"></script>
     <script type="module" src="../js/navbar-user.js"></script>
     <script src="../js/role-sidebar.js"></script>
-    <script src="../js/add-apartment.js"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
