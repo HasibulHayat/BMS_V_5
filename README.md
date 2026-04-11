@@ -14,6 +14,7 @@ It helps property managers, owners, and administrators efficiently handle:
 
 Built with real-world scenarios in mind to reduce manual work, errors, and operational complexity.
 
+<br>
 ---
 
 ## What Problems It Solves
