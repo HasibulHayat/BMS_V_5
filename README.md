@@ -2,28 +2,55 @@
 <br>
 
 ## Overview
-A full-stack Apartment Management System for managing buildings, apartments, ownership structures,lease management and others with role-based access control.
+
+A modern system designed to simplify and automate building and apartment management.
+
+It helps property managers, owners, and administrators efficiently handle:
+
+* Apartments and buildings
+* Ownership tracking (even with multiple owners)
+* Tenant and lease management
+* User access and roles
+
+Built with real-world scenarios in mind to reduce manual work, errors, and operational complexity.
+
+---
+
+## What Problems It Solves
+
+* Eliminates manual tracking of ownership and tenants
+* Prevents conflicts with clear ownership percentages
+* Ensures only one active lease per apartment
+* Centralizes all building-related data in one system
+* Provides controlled access for different user roles
+
+---
 
 ## Architecture
-- Frontend: Bootstrap + JavaScript
-- Backend: Spring Boot (REST API)
-- Database: PostgreSQL
+
+* **Frontend:** Bootstrap + JavaScript
+* **Backend:** Spring Boot (REST API)
+* **Database:** PostgreSQL
+
+---
 
 ## Project Structure
+
 BMS_V_5/
-<br>
- ├── backend
- <br>
- ├── frontend
+├── backend
+├── frontend
+
+---
 
 ## Features
-- Building Management
-- Apartment Management
-- Resident Management
-- Owner Management
-- Lease Management
-- User Authentication
-- Role-based access control
+
+* Building & Apartment Management
+* Ownership Management (multi-owner, percentage-based)
+* Lease Management with validation rules
+* User & Role Management
+* Secure Authentication (JWT-based)
+
+---
 
 ## User Roles
 
@@ -36,8 +63,17 @@ BMS_V_5/
 | MEMBER      | Household member                              |
 | STAFF       | Operational staff                             |
 
+---
+
 ## Future Improvements
-- Payment Tracking
-- Notification System
-- Dashboard analytics
-- Production deployment
+
+* Payment Tracking
+* Notification System (rent reminders, alerts)
+* Dashboard analytics
+* Production deployment
+
+---
+
+## Why This System?
+
+This system is designed not just as software, but as a **practical solution for real estate and property management businesses**, helping them operate more efficiently and scale easily.
