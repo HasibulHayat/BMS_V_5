@@ -1,4 +1,4 @@
-# BMS_V_5 - Apartment Management System
+# BMS_V_5 - Building Management System
 <br>
 
 ## Overview
