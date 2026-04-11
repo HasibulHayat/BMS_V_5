@@ -3,7 +3,6 @@
 
 ## Overview
 A full-stack Apartment Management System for managing buildings, apartments, ownership structures,lease management and others with role-based access control.
-<br>
 
 ## Architecture
 - Frontend: Bootstrap + JavaScript
