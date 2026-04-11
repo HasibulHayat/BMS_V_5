@@ -1,6 +1,7 @@
 # BMS_V_5 - Building Management System
 <br>
 
+
 ## Overview
 
 A modern system designed to simplify and automate building and apartment management.
@@ -14,8 +15,6 @@ It helps property managers, owners, and administrators efficiently handle:
 
 Built with real-world scenarios in mind to reduce manual work, errors, and operational complexity.
 
-<br>
----
 
 ## What Problems It Solves
 
@@ -25,7 +24,6 @@ Built with real-world scenarios in mind to reduce manual work, errors, and opera
 * Centralizes all building-related data in one system
 * Provides controlled access for different user roles
 
----
 
 ## Architecture
 
@@ -33,7 +31,6 @@ Built with real-world scenarios in mind to reduce manual work, errors, and opera
 * **Backend:** Spring Boot (REST API)
 * **Database:** PostgreSQL
 
----
 
 ## Project Structure
 
@@ -41,7 +38,6 @@ BMS_V_5/
 ├── backend
 ├── frontend
 
----
 
 ## Features
 
@@ -51,7 +47,6 @@ BMS_V_5/
 * User & Role Management
 * Secure Authentication (JWT-based)
 
----
 
 ## User Roles
 
@@ -64,7 +59,6 @@ BMS_V_5/
 | MEMBER      | Household member                              |
 | STAFF       | Operational staff                             |
 
----
 
 ## Future Improvements
 
@@ -73,7 +67,6 @@ BMS_V_5/
 * Dashboard analytics
 * Production deployment
 
----
 
 ## Why This System?
 
