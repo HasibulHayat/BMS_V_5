@@ -25,6 +25,7 @@ Built with real-world scenarios in mind to reduce manual work, errors, and opera
 * Centralizes all building-related data in one system
 * Provides controlled access for different user roles
 
+<br>
 
 ## Architecture
 
@@ -32,6 +33,7 @@ Built with real-world scenarios in mind to reduce manual work, errors, and opera
 * **Backend:** Spring Boot (REST API)
 * **Database:** PostgreSQL
 
+<br>
 
 ## Project Structure
 
@@ -39,6 +41,7 @@ BMS_V_5/
 ├── backend
 ├── frontend
 
+<br>
 
 ## Features
 
@@ -48,6 +51,7 @@ BMS_V_5/
 * User & Role Management
 * Secure Authentication (JWT-based)
 
+<br>
 
 ## User Roles
 
@@ -60,6 +64,7 @@ BMS_V_5/
 | MEMBER      | Household member                              |
 | STAFF       | Operational staff                             |
 
+<br>
 
 ## Future Improvements
 
@@ -68,6 +73,7 @@ BMS_V_5/
 * Dashboard analytics
 * Production deployment
 
+<br>
 
 ## Why This System?
 
