@@ -22,15 +22,7 @@ BMS_V_5/
 - Owner Management
 - Lease Management
 - User Authentication
-- Payment Tracking
-- Notification System
 - Role-based access control
-
-## Future Improvements
-- Email notifications
-- Dashboard analytics
-- Production deployment
-
 
 ## User Roles
 
@@ -42,3 +34,9 @@ BMS_V_5/
 | RESIDENT    | Lives in apartments                           |
 | MEMBER      | Household member                              |
 | STAFF       | Operational staff                             |
+
+## Future Improvements
+- Payment Tracking
+- Notification System
+- Dashboard analytics
+- Production deployment
