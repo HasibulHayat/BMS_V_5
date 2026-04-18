@@ -1,4 +1,9 @@
-# BMS_V_5 - Building Management System
+# Apartment Easy
+
+> A modern and reliable system for managing apartments, ownership, and tenants.
+
+**Technical Name:** BMS_V_5 (Building Management System)
+
 <br>
 
 
