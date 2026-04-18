@@ -1,56 +1,56 @@
-# 📚 Documentation
+# Documentation
 
-Welcome to the Building Management System documentation.
+Welcome to the **Apartment Easy** documentation
 
----
+<br>
 
 ## Sections
 
-### 📦 Product
+### Product
 
-High-level overview for understanding what the system does.
+High-level overview for understanding what the system does
 
 * `/product/overview.md`
 * `/product/features.md`
 * `/product/business-rules.md`
 
----
+<br>
 
-### 📋 Requirements
+### Requirements
 
-Detailed system rules and validations.
+Detailed system rules and validations
 
 * `/requirements/*`
 
----
+<br>
 
-### 🏗️ Architecture
+### Architecture
 
-Technical design and internal structure.
+Technical design and internal structure
 
 * `/architecture/system-design.md`
 * `/architecture/auth-flow.md`
 
----
+<br>
 
-### 🔌 API
+### API
 
-Overview of available endpoints.
+Overview of available endpoints
 
 * `/api/overview.md`
 
----
+<br>
 
-### ⚙️ Setup
+### Setup
 
 Instructions to run and configure the system.
 
 * `/setup/installation.md`
 * `/setup/environment.md`
 
----
+<br>
 
 ## Getting Started
 
 Start with:
-👉 `/product/overview.md`
+`/product/overview.md`
