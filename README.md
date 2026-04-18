@@ -19,18 +19,17 @@ Built with real-world scenarios in mind to reduce manual work, errors, and opera
 
 ## What Problems It Solves
 
-* Eliminates manual tracking of ownership and tenants
-* Prevents conflicts with clear ownership percentages
-* Ensures only one active lease per apartment
-* Centralizes all building-related data in one system
-* Provides controlled access for different user roles
+* Simplifies management of buildings and apartments from a single system
+* Eliminates manual tracking errors in ownership and tenant records
+* Provides clear ownership structure, even with multiple owners per apartment
+* Ensures controlled access and accountability through role-based permissions
 
 <br>
 
 ## Architecture
 
 * **Frontend:** Bootstrap + JavaScript
-* **Backend:** Spring Boot (REST API)
+* **Backend:** Spring Boot
 * **Database:** PostgreSQL
 
 <br>
@@ -59,7 +58,7 @@ BMS_V_5/
 | ----------- | --------------------------------------------- |
 | SUPER_ADMIN | Full system control, can create admins        |
 | ADMIN       | Manages buildings, apartments, owners, leases |
-| OWNER       | Owns apartments, can view buildings           |
+| OWNER       | Owns apartments                               |
 | RESIDENT    | Lives in apartments                           |
 | MEMBER      | Household member                              |
 | STAFF       | Operational staff                             |
