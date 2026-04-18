@@ -2,7 +2,7 @@
 
 > A modern and reliable system for managing apartments, ownership, and tenants.
 
-**Technical Name:** BMS_V_5 (Building Management System)
+**Technical Name :** BMS_V_5 (Building Management System Version 5)
 
 <br>
 
