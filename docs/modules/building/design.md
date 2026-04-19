@@ -1,8 +1,8 @@
-# 🧠 Building Module – Design
+# Building Module – Design
 
 ---
 
-## 🎯 Core Idea
+## Core Idea
 
 The Building module uses a **progressive data model**:
 
@@ -10,9 +10,9 @@ The Building module uses a **progressive data model**:
 - Additional data is added later
 - Different roles interact at different stages
 
----
+<br>
 
-## 👥 Roles & Permissions
+## Roles & Permissions
 
 | Role         | Permissions              |
 |-------------|--------------------------|
@@ -20,9 +20,9 @@ The Building module uses a **progressive data model**:
 | ADMIN       | View, Update             |
 | OWNER       | View only                |
 
----
+<br>
 
-## 🔄 Lifecycle
+## Lifecycle
 
 ### 1. Skeleton Creation
 - Actor: SUPER_ADMIN
@@ -38,7 +38,7 @@ The Building module uses a **progressive data model**:
 - city, country
 - description
 
----
+<br>
 
 ### 2. Enrichment / Completion
 - Actor: SUPER_ADMIN, ADMIN
@@ -46,59 +46,52 @@ The Building module uses a **progressive data model**:
 
 #### Includes:
 - Address (street, area, district, postalCode)
-- Structure (floors, units, parking, elevator)
-- Facilities (generator, guard, CCTV)
 - Geo (latitude, longitude)
+- Structure (total floors, basement floors, total units, parking, elevator, water source)
+- Facilities (generator, guard, CCTV)
 - Area info (land, floor, unit area)
 - Dates (construction start/end)
 - Metadata (developer, association, notes)
 
----
+<br>
 
 ### 3. Consumption
 - Actor: OWNER
 - Purpose: Read-only access to building data
 
----
+<br>
 
-## 🧩 Data Behavior
+## Data Behavior
 
 ### Partial Entities
 - Buildings may exist with incomplete data
 - Null values are expected in early stages
 
----
+<br>
 
 ### Updates
 - Updates are flexible (partial updates allowed)
 - Only provided fields are modified
 
----
+<br>
 
-## 🔐 Constraints
+## Constraints
 
 - buildingCode must be unique
 - registrationNumber must be unique
 - Only authorized roles can perform actions
 
----
+<br>
 
-## ⚠️ Known Decisions
+## Known Decisions
 
 ### No Ownership Filtering
 - Owners can view all buildings
 - Simplifies current system design
 
----
+<br>
 
 ### No Completion Flag (Yet)
 - System does not track if a building is "complete"
 - Can be added later if needed
 
----
-
-## 🚀 Future Improvements
-
-- Add `isProfileComplete`
-- Add ownership-based filtering
-- Add pagination for large datasets
